@@ -28,16 +28,16 @@ export const CartSlice = createSlice({
     },
     increaseQuantity(state, action) {
       const { name, quantity } = action.payload;
-      const itemToIncrease = state.items.find(item => item.name === name);
-      if (itemToIncrease) {
-        itemToIncrease.quantity += 1;
+      const itemforIncrease = state.items.find(item => item.name === name);
+      if (itemforIncrease) {
+        itemforIncrease.quantity += 1;
       }
     },
   decreaseQuantity(state, action) {
       const { name, quantity } = action.payload;
-      const itemToDecrease = state.items.find(item => item.name === name);
-      if (itemToDecrease && itemToDecrease.quantity > 1) {
-        itemToDecrease.quantity -= 1;
+      const itemforDecrease = state.items.find(item => item.name === name);
+      if (itemforDecrease && itemforDecrease.quantity > 1) {
+        itemforDecrease.quantity -= 1;
       }
     },
   },
